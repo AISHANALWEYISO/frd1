@@ -7,7 +7,7 @@ import { Form, Button, Alert } from 'react-bootstrap';
 
 
 const AddUser = () => {
-    const [form, setForm] = useState({ name: '', email: '', contact: '', password: ''  });
+    const [form, setForm] = useState({ name: '', email: '', contact: '', password: '',usertype: '' });
   const [message, setMessage] = useState('');
 
   const handleChange = (e) => {
@@ -19,7 +19,7 @@ const AddUser = () => {
     try {
       await axios.post('http://127.0.0.1:5000/api/v1/auth/register', form);
       setMessage('User added successfully!');
-      setForm({ name: '', email: '', contact: '', password: '' });
+      setForm({ name: '', email: '', contact: '', password: '',usertype:''});
     } catch (err) {
       setMessage('Error adding user');
     }

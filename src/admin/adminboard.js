@@ -1,16 +1,3 @@
-// import React from "react";
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-// const Adminboard = () => {
-//   return (
-//     <div>
-//       <h1>Welcome to the Admin Dashboard</h1>
-//     </div>
-//   );
-// };
-
-// export default Adminboard; 
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Sidebar from "../admin/pages/Sidebar";
@@ -38,4 +25,3 @@ const Adminboard = () => {
 };
 
 export default Adminboard;
-

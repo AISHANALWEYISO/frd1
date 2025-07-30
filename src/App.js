@@ -24,7 +24,6 @@ function AppWrapper() {
   return (
     <>
       {!isAdminRoute && <Nav />}
-
       <div className={!isAdminRoute ? 'container mt-4' : 'p-0'}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -33,17 +32,16 @@ function AppWrapper() {
           <Route path="/our-team" element={<OurTeam />} /> 
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path="/contact" element={<Booking />} />
+          <Route path="/booking" element={<Booking />} /> {/* Fixed duplicate route */}
 
-
-          {/* Admin dashboard and nested routes */}
-          <Route path="/admin/*" element={<Adminboard />}>
+          {/* Admin dashboard route */}
+          <Route path="/admin" element={<Adminboard />}>
+            <Route index element={<h2>Welcome to Admin Dashboard</h2>} />
             <Route path="add-user" element={<AddUser />} />
             <Route path="show-user" element={<ShowUsers />} />
           </Route>
         </Routes>
       </div>
-
       {!isAdminRoute && <Footer />}
     </>
   );

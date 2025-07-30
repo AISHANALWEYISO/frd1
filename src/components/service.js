@@ -1,6 +1,5 @@
 // import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import { motion } from 'framer-motion';
+
 
 // // Image imports
 // import farm from '../images/farm managent.jpeg';
@@ -98,7 +97,7 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, Button, Row, Col } from 'react-bootstrap';
 import { Briefcase, BarChart, Globe, Gear, Droplet, Shield, Truck, Layers, People } from 'react-bootstrap-icons';
-
+import Booking from './Booking';
 const services = [
   {
     title: 'Crop Management',
