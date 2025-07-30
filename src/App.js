@@ -10,12 +10,19 @@ import Services from './components/service';
 import Products from './components/products';
 import OurTeam from './components/team';
 import Nav from './components/nav';
+// import Booking from './components/booking'
 import Footer from './components/footer';
 import Booking from './components/Booking';
-
-import Adminboard from './admin/adminboard';
+// for an admin dash board
+import Login from './admin/pages/login';
+import AdminBoard from './admin/adminboard';
+import Dashboard from './admin/pages/dashboard';
 import AddUser from './admin/pages/AddUser';
 import ShowUsers from './admin/pages/ShowUsers';
+import Farmers from './admin/pages/farmers'
+import Bookings from './admin/pages/bookings'
+import Product from './admin/pages/products'
+import Service from './admin/pages/services'
 
 function AppWrapper() {
   const location = useLocation();
@@ -31,14 +38,23 @@ function AppWrapper() {
           <Route path="/products" element={<Products />} />
           <Route path="/our-team" element={<OurTeam />} /> 
           <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/booking" element={<Booking />} /> {/* Fixed duplicate route */}
+          <Route path="/contact" element={<ContactUs />} />  
+          <Route path="/booking" element={<Booking />} />          
 
-          {/* Admin dashboard route */}
-          <Route path="/admin" element={<Adminboard />}>
-            <Route index element={<h2>Welcome to Admin Dashboard</h2>} />
-            <Route path="add-user" element={<AddUser />} />
-            <Route path="show-user" element={<ShowUsers />} />
+          {/* Admin dashboard and nested routes */}
+          <Route path="/admin/login" element={<Login />} />
+          <Route path="/admin/*" element={<AdminBoard />}>
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="add-user" element={<AddUser />} />
+          <Route path="show-user" element={<ShowUsers />} />
+          <Route path="products" element={<Product />} />
+          <Route path="services" element={<Service />} />
+          <Route path="bookings" element={<Bookings />} />
+          <Route path="farmers" element={<Farmers />} />
+
+        
+          
+
           </Route>
         </Routes>
       </div>

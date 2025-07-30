@@ -11,10 +11,35 @@ import food from '../images/food.jpg';
 import irrigation from '../images/irrigation.jpg';
 // import value from '../images/value.jpeg';
 
+
 const Home = () => {
+  const slideTexts = [
+    {
+      heading: (
+        <Typewriter
+          words={['Yucca Consulting Limited']}
+          loop={1}
+          cursor
+          cursorStyle=""
+          typeSpeed={70}
+          deleteSpeed={0}
+          delaySpeed={1000}
+        />
+      ),
+      subtext: 'Cultivating a sustainable world',
+    },
+    {
+      heading: 'Monitoring and evaluation of small-scale farming practices',
+    
+    },
+    {
+      heading: ' crop management and food resilience',
+      
+    },
+  ];
+
   return (
-    <div>
-      {/* Hero Section with Carousel */}
+    <div style={{ margin: 0, padding: 0 }}>
       <Carousel fade controls={false} indicators interval={2500}>
         {[image2, man, food].map((img, index) => (
           <Carousel.Item key={index}>
@@ -23,44 +48,28 @@ const Home = () => {
                 backgroundImage: `url(${img})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                height: '85vh',
-                position: 'relative',
+                height: '100vh',
+                width: '1400px',
+                margin: 0,
+                padding: 0,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: 'white',
               }}
             >
-              {/* Transparent Overlay Rectangle */}
               <div
                 className="p-4 text-center"
                 style={{
                   backgroundColor: 'rgba(0, 0, 0, 0.5)',
                   borderRadius: '10px',
-                  maxWidth: '900px',
-                  padding: '30px',
+                  maxWidth: '90%',
+                  color: 'white',
                 }}
               >
                 <h1 className="fw-bold mb-3" style={{ fontSize: '3rem' }}>
-                  {index === 0 ? (
-                       <Typewriter
-               words={['Yucca Consulting Limited']}
-               loop={1}
-               cursor
-               cursorStyle=""
-               typeSpeed={70}
-              deleteSpeed={0}
-               delaySpeed={1000}
-             />
-                  ) : (
-                    ''
-                  )}
+                  {slideTexts[index].heading}
                 </h1>
-                <p className="fst-italic fs-4">Cultivating a sustainable world</p>
-                <p style={{ fontSize: '1.1rem' }}>
-                
-                </p>
-               
+                <p className="fst-italic fs-4">{slideTexts[index].subtext}</p>
               </div>
             </div>
           </Carousel.Item>

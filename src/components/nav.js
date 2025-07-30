@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../images/logo.png';
+import logo from '../images/logo1.png';
 
 const NavbarComponent = () => {
   const [aboutOpen, setAboutOpen] = useState(false);
@@ -57,7 +57,7 @@ const styles = {
     flexShrink: 0,
   },
   logo: {
-    height: '80px',
+    height: '90px',
     width: 'auto',
   },
   navLinks: {
@@ -70,8 +70,8 @@ const styles = {
   link: {
     color: '#366000',
     textDecoration: 'none',
-    fontWeight: 'bolder',
-    fontSize: '16px',
+    fontWeight: 'bold',
+    fontSize: '20px',
   },
   dropdown: {
     position: 'absolute',

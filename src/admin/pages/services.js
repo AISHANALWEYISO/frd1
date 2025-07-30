@@ -2,31 +2,28 @@ import React from 'react';
 import { Button, Table } from 'react-bootstrap';
 import { FaPlus, FaEdit, FaTrash } from 'react-icons/fa';
 
-const Products = () => {
-  // You can add state and API calls here later for full CRUD
+const Services = () => {
   return (
     <div>
-      <h2>Manage Products</h2>
+      <h2>Manage Services</h2>
       <Button variant="success" className="mb-3">
-        <FaPlus /> Add Product
+        <FaPlus /> Add Service
       </Button>
       <Table striped bordered hover>
         <thead>
           <tr>
             <th>#</th>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Stock</th>
+            <th>Service Name</th>
+            <th>Description</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-          {/* Replace with dynamic rows */}
+          {/* Example static data */}
           <tr>
             <td>1</td>
-            <td>Sample Product</td>
-            <td>Type A</td>
-            <td>100</td>
+            <td>Consulting</td>
+            <td>Professional advice</td>
             <td>
               <Button variant="warning" size="sm" className="me-2"><FaEdit /></Button>
               <Button variant="danger" size="sm"><FaTrash /></Button>
@@ -38,4 +35,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Services;
