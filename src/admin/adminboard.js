@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Sidebar from "../admin/pages/Sidebar";
-import AddUser from "../admin/pages/AddUser";
-import ShowUsers from "../admin/pages/ShowUsers";
-import { Routes, Route } from 'react-router-dom';
-import Products from '../admin/pages/products'
-=======
 // import React from 'react';
 // import { Routes, Route, Navigate} from 'react-router-dom';
 // import Sidebar from '../admin/pages/Sidebar';
@@ -53,7 +44,6 @@ import Products from '../admin/pages/products'
 
 // export default Adminboard;
 // src/admin/AdminBoard.js
->>>>>>> 8da101011cdfe3362edf8b8012cca9d97b5e2c07
 
 import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
@@ -73,8 +63,6 @@ const AdminBoard = () => {
   );
 };
 
-<<<<<<< HEAD
-export default Adminboard;
-=======
+
 export default AdminBoard;
->>>>>>> 8da101011cdfe3362edf8b8012cca9d97b5e2c07
+

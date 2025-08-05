@@ -64,14 +64,15 @@ const styles = {
     listStyle: 'none',
     display: 'flex',
     gap: '30px',
-    margin: 0,
     padding: 0,
   },
   link: {
-    color: '#366000',
+    color: '#646860ff',
     textDecoration: 'none',
     fontWeight: 'bold',
     fontSize: '20px',
+    marginRight:'5.2rem',
+    
   },
   dropdown: {
     position: 'absolute',
